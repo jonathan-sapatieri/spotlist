@@ -55,7 +55,8 @@ const Spotify = {
     };
   },
 
-  savePlaylist(playlistName, trackUris) {
+  async savePlaylist(playlistName, trackUris) {
+    
     if(!playlistName || !trackUris) {
       return;
     }
@@ -67,35 +68,25 @@ const Spotify = {
     let userId = '';
     let playlistId = '';
 
-    return fetch('https://api.spotify.com/v1/me', {
+    let user = await fetch(`https://api.spotify.com/v1/me`, {
       headers: headers
-    })
-      .then(response => { 
-        if(response.ok) {
-          return response.json();
-        };
-      })
-      .then(jsonResponse => {
-        userId = jsonResponse.id;
-        fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
-            headers: headers,
-            method: 'POST',
-            body: JSON.stringify({name: playlistName})
-        })
-        .then(response => {
-          if(response.ok) {
-            return response.json();
-          };
-        })
-        .then(jsonResponse => {
-          playlistId = jsonResponse.id;
-          fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
-            headers: headers,
-            method: 'POST',
-            body: JSON.stringify({uris: trackUris})
-          });
-        });
-      });
+    });
+    user = await user.json();
+    userId = user.id
+
+    let playlist = await fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
+      headers: headers,
+      method: 'POST',
+      body: JSON.stringify({name:  playlistName})
+    });
+    playlist = await playlist.json();
+    playlistId = playlist.id;
+
+    await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
+      headers: headers,
+      method: 'POST',
+      body: JSON.stringify({uris: trackUris})
+    });
   }
 };
 
