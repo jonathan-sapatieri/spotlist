@@ -13,7 +13,7 @@ class App extends React.Component {
 
     this.state = {
       searchResults: [],
-      playlistName: "New Playlist",
+      playlistName: "",
       playlistTracks: [],
     };
 
@@ -64,25 +64,23 @@ class App extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>Spot<span className="highlight">list</span></h1>
-        <div className="App">
-          <SearchBar 
-            onSearch={this.search}
+      <div className="App">
+      <h1 className="App-title">Spotlist</h1>
+        <SearchBar 
+          onSearch={this.search}
+        />
+        <div className="App-playlist">
+          <SearchResults
+            searchResults={this.state.searchResults}
+            onAdd={this.addTrack}
           />
-          <div className="App-playlist">
-            <SearchResults
-              searchResults={this.state.searchResults}
-              onAdd={this.addTrack}
-            />
-            <Playlist 
-              playlistName={this.state.playlistName} 
-              tracks={this.state.playlistTracks}
-              onNameChange={this.updatePlaylistName} 
-              onRemove={this.removeTrack}
-              onSave={this.savePlaylist}
-            />
-          </div>
+          <Playlist 
+            playlistName={this.state.playlistName} 
+            tracks={this.state.playlistTracks}
+            onNameChange={this.updatePlaylistName} 
+            onRemove={this.removeTrack}
+            onSave={this.savePlaylist}
+          />
         </div>
       </div>
     );

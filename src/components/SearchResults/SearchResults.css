@@ -1,10 +1,23 @@
 .SearchResults {
-  width: 50%;
+  width: 45%;
   height: 950px;
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: #321184;
   overflow-y: scroll;
-  padding: .88rem;
-  background-color: rgba(1, 12, 63, 0.7);
-  box-shadow: 0 4px 2px 2px #000000;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.4);
+}
+
+.SearchResults-title {
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid #fff;
+  padding: 0 0 1rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  background: transparent;
 }
 
 ::-webkit-scrollbar {
