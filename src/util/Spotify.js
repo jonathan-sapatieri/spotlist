@@ -90,4 +90,4 @@ const Spotify = {
   }
 };
 
-module.exports = Spotify;
+export default Spotify;
