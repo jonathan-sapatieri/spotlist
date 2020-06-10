@@ -1,5 +1,5 @@
 const clientId      = "e9dbde275cbf4de3964c6f674e6d59f3",
-      redirectUri   = "http://localhost:3000",
+      redirectUri   = "https://jonathan-sapatieri.github.io/spotlist/",
       baseApiUrl    = "https://api.spotify.com/v1";
 
 const Spotify = {
