@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/spotlist/static/css/main.966af1b9.chunk.css",
+    "main.js": "/spotlist/static/js/main.88b5b1cb.chunk.js",
+    "main.js.map": "/spotlist/static/js/main.88b5b1cb.chunk.js.map",
+    "runtime-main.js": "/spotlist/static/js/runtime-main.a3e83c88.js",
+    "runtime-main.js.map": "/spotlist/static/js/runtime-main.a3e83c88.js.map",
+    "static/js/2.da91d7ba.chunk.js": "/spotlist/static/js/2.da91d7ba.chunk.js",
+    "static/js/2.da91d7ba.chunk.js.map": "/spotlist/static/js/2.da91d7ba.chunk.js.map",
+    "index.html": "/spotlist/index.html",
+    "precache-manifest.02153e0708bb379e057844d7392c8a70.js": "/spotlist/precache-manifest.02153e0708bb379e057844d7392c8a70.js",
+    "service-worker.js": "/spotlist/service-worker.js",
+    "static/css/main.966af1b9.chunk.css.map": "/spotlist/static/css/main.966af1b9.chunk.css.map",
+    "static/js/2.da91d7ba.chunk.js.LICENSE.txt": "/spotlist/static/js/2.da91d7ba.chunk.js.LICENSE.txt",
+    "static/media/SearchBar.css": "/spotlist/static/media/background_photo_desktop.37be7357.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3e83c88.js",
+    "static/js/2.da91d7ba.chunk.js",
+    "static/css/main.966af1b9.chunk.css",
+    "static/js/main.88b5b1cb.chunk.js"
+  ]
+}
